@@ -1,0 +1,40 @@
+move();
+collectCoins();
+moveTwice();
+collectCoins();
+moveTwice();
+collectCoins();
+moveTwice();
+collectCoins();
+
+function turnAround() {
+    turnLeft();
+    turnLeft();
+}
+
+function moveTwice() {
+    move();
+    move();
+}
+
+function moveThree() {
+    move();
+    move();
+    move();
+}
+
+function turnRight() {
+    turnLeft();
+    turnLeft();
+    turnLeft();
+}
+
+function collectCoins() {
+    turnLeft();
+    moveThree();
+    takeBall();
+    takeBall();
+    turnAround();
+    moveThree();
+    turnLeft();
+}
