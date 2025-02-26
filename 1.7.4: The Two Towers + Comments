@@ -1,0 +1,49 @@
+/*Has Karel build two
+towers and end facing East
+at the top of the second one
+*/
+function start(){
+    move();
+    buildTower();
+    toBottom();
+    move();
+    buildTower();
+    turnRight();
+}
+
+//Has Karel turn right
+function turnRight() {
+    turnLeft();
+    turnLeft();
+    turnLeft();
+}
+
+/*Precondition: Karel is at the botom
+of the tower facing East
+Postcondition: Karel is at the top
+of the tower facing North
+*/
+function buildTower() {
+    turnLeft();
+    putBall();
+    move();
+    putBall();
+    move();
+    putBall();
+    move();
+}
+
+/*Precondition: Karel is on top of the
+second tower facing North
+Postcondition: Karel is at the bottom in front
+of the first tower facing East
+*/
+function toBottom() {
+    turnRight();
+    move();
+    turnRight();
+    move();
+    move();
+    move();
+    turnLeft();
+}
